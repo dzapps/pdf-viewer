@@ -1,0 +1,89 @@
+/* Add in the viewer styles here */
+
+/* Overlay */
+.pdf-viewer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .85);
+  display: none;
+  z-index: 90;
+}
+
+.pdf-viewer-overlay .pdf-view {
+  width: 80%;
+  height: 80%;
+  margin: 100px 10% 50px;
+  z-index: 95;
+}
+
+.pdf-viewer-overlay .pdf-view .pdf-view-no-support {
+  background: #000;
+  color: #FFF;
+  padding: 20px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.pdf-viewer-overlay .pdf-view .pdf-view-download {
+  font-size: 1.5em;
+}
+
+.pdf-viewer-overlay .pdf-view .icon.icon-download:before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  background: transparent url('./icons/white/PNG/download2.png') no-repeat;
+  background: transparent url('./icons/white/SVG/download2.svg') no-repeat;
+  background-size: cover;
+}
+
+.pdf-viewer-overlay iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Toolbar used to download the PDF (displayed in overlay) */
+.pdf-viewer-toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* Close button in toolbar */
+.pdf-viewer-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  margin: 100px 10%;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.pdf-viewer-close .icon-close {
+  position: relative;
+  padding: 10px;
+  color: #FFF;
+  /* background: #000; */
+  top: -30px;
+  border-radius: 4px 4px 0 0;
+}
+
+.pdf-viewer-close .icon-close:after {
+  display: inline-block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5em;
+  vertical-align: middle;
+  background: url(./icons/white/PNG/cross.png) transparent 0% 0% no-repeat;
+  background-size: auto auto;
+  background: url(./icons/white/SVG/cross.svg) transparent 0% 0% no-repeat;
+  background-size: 20px;
+}
